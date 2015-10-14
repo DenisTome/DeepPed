@@ -24,7 +24,7 @@ fi
 
 echo "Downloading precomputed DeepPed model (500 MB)..."
 
-wget http://www.cs.berkeley.edu/~rbg/$FILE
+wget ftp://ftp.elet.polimi.it/users/Luca.Bondi/deepped/$FILE
 
 echo "Unzipping..."
 
