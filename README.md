@@ -37,7 +37,7 @@ LICENSE file for details).
   0. Change into the R-CNN source code directory: `cd rcnn`
   0. Get the DeepPed source code by cloning the repository: `git clone https://github.com/DenisTome/DeepPed.git`
   0. Get the Piotr's Image & Video Matlab Toolbox by cloning the repository: `git clone https://github.com/pdollar/toolbox.git`
-  0. From the `PeepPed` folder, run the model fetch script: `./fetch_models.sh`. 
+  0. From the `R-CNN` folder, run the model fetch script: `./DeepPed/fetch_models.sh`. 
   0. Open the `startup.m` matlab file, adding the two commands `addpath(genpath('DeepPed'));` and `addpath(genpath('toolbox'));` at the end of the file.
 
 ### Running an DeepPed on an image
