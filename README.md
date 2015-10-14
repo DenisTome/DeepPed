@@ -40,7 +40,7 @@ LICENSE file for details).
   0. From the `R-CNN` folder, run the model fetch script: `./DeepPed/fetch_models.sh`. 
   0. Open the `startup.m` matlab file, adding the two commands `addpath(genpath('DeepPed'));` and `addpath(genpath('toolbox'));` at the end of the file.
 
-### Running an DeepPed on an image
+### Running DeepPed on an image
 
 1. Change to where you installed R-CNN: `cd rcnn`. 
 2. Start MATLAB `matlab`.
