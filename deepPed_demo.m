@@ -1,6 +1,6 @@
 function deepPed_demo()
 
-imgPath = 'TestImages';
+imgPath = 'DeepPed/TestImages';
 listImages = bbGt('getFiles',{imgPath});
 
 %load and adjust the LDCF detector
