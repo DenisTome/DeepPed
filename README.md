@@ -22,7 +22,7 @@ If you find R-CNN useful in your research, please consider citing:
 
 ### License
 
-R-CNN is released under the Simplified BSD License (refer to the
+DeepPed is released under the Simplified BSD License (refer to the
 LICENSE file for details).
 
 ### Installing R-CNN

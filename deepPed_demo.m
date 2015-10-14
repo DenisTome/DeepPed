@@ -3,21 +3,24 @@ function deepPed_demo()
 imgPath = 'DeepPed/TestImages';
 listImages = bbGt('getFiles',{imgPath});
 
-%load and adjust the LDCF detector
+% load and adjust the LDCF detector
 load('toolbox/detector/models/LdcfCaltechDetector.mat');
-pModify = struct('cascThr',-1,'cascCal',.05);
+pModify = struct('cascThr',-1,'cascCal',.025);
 detector = acfModify(detector,pModify);
 
-%load the trained SVM
+% load the trained SVM
 SVM = load('data/rcnn_models/DeepPed/SVM_finetuned_alexnet.mat');
 PersonW = SVM.W;
 PersonB = SVM.b;
+
+% load the trained svm of level 2
+cl2 = load('data/rcnn_models/DeepPed/SVM_level2.mat');
 
 %load the finetuned AlexNet
 rcnn_model_file = 'data/rcnn_models/DeepPed/finetuned_alexNet.mat';
 use_gpu = 0;    %to change to zero if caffe compiled without CUDA support
 rcnn_model = rcnn_load_model(rcnn_model_file, use_gpu);
-thresh = 0;
+thresh = 2;
 
 for i = 1 : length(listImages)
    img = imread(listImages{i});
@@ -43,7 +46,7 @@ for i = 1 : length(listImages)
    dets(:,3) = dets(:,3) - dets(:,1);
    dets(:,4) = dets(:,4) - dets(:,2);
    
-   %show the final obtained results
+   % show the final obtained results
    figure(1);
    imshow(img);
    hold on

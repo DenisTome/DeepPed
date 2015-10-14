@@ -28,6 +28,6 @@ wget ftp://ftp.elet.polimi.it/users/Luca.Bondi/deepped/$FILE
 
 echo "Unzipping..."
 
-tar zxvf $FILE
+tar zxvf $FILE -C ../.
 
 echo "Done. Please run this command again to verify that checksum = $CHECKSUM."
