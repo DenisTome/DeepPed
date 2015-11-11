@@ -18,14 +18,14 @@ cl2 = load('data/rcnn_models/DeepPed/SVM_level2.mat');
 
 %load the finetuned AlexNet
 rcnn_model_file = 'data/rcnn_models/DeepPed/finetuned_alexNet.mat';
-use_gpu = 0;    %to change to zero if caffe compiled without CUDA support
+use_gpu = 1;    %to change to zero if caffe compiled without CUDA support
 rcnn_model = rcnn_load_model(rcnn_model_file, use_gpu);
 thresh = 2;
 
 for i = 1 : length(listImages)
    img = imread(listImages{i});
    % detect possible pedestrians with LDCF
-   bbs = acfDetectSimplified(img,detector);
+   bbs = acfDetect(img,detector);
    dt_ldcf = bbs;
 
    % evaluate BBs retrieved by LDCF with our finetuned AlexNet
