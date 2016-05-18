@@ -31,7 +31,7 @@ LICENSE file for details).
   0. MATLAB (tested with 2015a on 64-bit Linux)
   0. Caffe's [prerequisites](http://caffe.berkeleyvision.org/installation.html#prequequisites)
 0. **Install Caffe and R-CNN**
-  0. Download [Caffe](https://github.com/BVLC/caffe)
+  0. Download [Caffe](https://github.com/BVLC/caffe) (version described in R-CNN instructions)
   0. Download R-CNN and follow the [instructions](http://github.com/rbgirshick/rcnn)
 0. **Install DeepPed**
   0. Change into the R-CNN source code directory: `cd rcnn`
